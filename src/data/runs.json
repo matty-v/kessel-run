@@ -1,0 +1,10 @@
+[
+  { "id": 1, "pilot": "Han Solo", "ship": "Millennium Falcon", "parsecs": 11.5, "hours": 14.2 },
+  { "id": 2, "pilot": "Lando Calrissian", "ship": "Millennium Falcon", "parsecs": 12.0, "hours": 15.1 },
+  { "id": 3, "pilot": "Hera Syndulla", "ship": "Ghost", "parsecs": 12.4, "hours": 16.8 },
+  { "id": 4, "pilot": "Dash Rendar", "ship": "Outrider", "parsecs": 12.7, "hours": 15.9 },
+  { "id": 5, "pilot": "Talon Karrde", "ship": "Wild Karrde", "parsecs": 13.1, "hours": 18.3 },
+  { "id": 6, "pilot": "Booster Terrik", "ship": "Errant Venture", "parsecs": 14.6, "hours": 21.7 },
+  { "id": 7, "pilot": "Ketsu Onyo", "ship": "Shadow Caster", "parsecs": 13.8, "hours": 17.5 },
+  { "id": 8, "pilot": "Mirax Terrik", "ship": "Pulsar Skate", "parsecs": 12.9, "hours": 16.1 }
+]
