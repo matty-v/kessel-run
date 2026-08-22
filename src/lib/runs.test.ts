@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatParsecs, rankRuns, type SmugglingRun } from './runs'
+import { formatDuration, formatParsecs, rankRuns, type SmugglingRun } from './runs'
 
 const run = (id: number, parsecs: number, hours: number): SmugglingRun => ({
   id,
@@ -31,5 +31,20 @@ describe('formatParsecs', () => {
   it('renders one decimal with unit', () => {
     expect(formatParsecs(11.5)).toBe('11.5 pc')
     expect(formatParsecs(12)).toBe('12.0 pc')
+  })
+})
+
+describe('formatDuration', () => {
+  it('renders hours and rounded minutes', () => {
+    expect(formatDuration(14.2)).toBe('14h 12m')
+  })
+
+  it('renders an exact-hour value with 0m', () => {
+    expect(formatDuration(15.0)).toBe('15h 0m')
+  })
+
+  it('carries rounded minutes into the next hour instead of showing 60m', () => {
+    expect(formatDuration(14.999)).toBe('15h 0m')
+    expect(formatDuration(14.999)).not.toBe('14h 60m')
   })
 })

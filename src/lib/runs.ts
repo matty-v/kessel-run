@@ -14,3 +14,8 @@ export function rankRuns(runs: SmugglingRun[]): SmugglingRun[] {
 export function formatParsecs(parsecs: number): string {
   return `${parsecs.toFixed(1)} pc`
 }
+
+export function formatDuration(hours: number): string {
+  const totalMinutes = Math.round(hours * 60)
+  return `${Math.floor(totalMinutes / 60)}h ${totalMinutes % 60}m`
+}
