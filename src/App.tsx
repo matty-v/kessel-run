@@ -1,5 +1,5 @@
 import runsData from './data/runs.json'
-import { formatParsecs, rankRuns, type SmugglingRun } from './lib/runs'
+import { formatDuration, formatParsecs, rankRuns, type SmugglingRun } from './lib/runs'
 
 const runs = rankRuns(runsData as SmugglingRun[])
 
@@ -15,7 +15,7 @@ export default function App() {
             <th>Pilot</th>
             <th>Ship</th>
             <th>Route</th>
-            <th>Time (h)</th>
+            <th>Time</th>
           </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@ export default function App() {
               <td>{run.pilot}</td>
               <td>{run.ship}</td>
               <td>{formatParsecs(run.parsecs)}</td>
-              <td>{run.hours.toFixed(1)}</td>
+              <td>{formatDuration(run.hours)}</td>
             </tr>
           ))}
         </tbody>
